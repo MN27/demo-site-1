@@ -2,44 +2,54 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Demo Site</title>
 
   <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
-  <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#ffffff">
-  <meta name="msapplication-TileColor" content="#3c3c3c">
-  <meta name="theme-color" content="#3c3c3c">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#ffffff" />
+  <meta name="msapplication-TileColor" content="#3c3c3c" />
+  <meta name="theme-color" content="#3c3c3c" />
 
   <!-- noindex -->
-  <meta name="robots" content="noindex">
-  <meta name="googlebot" content="noindex">
+  <meta name="robots" content="noindex" />
+  <meta name="googlebot" content="noindex" />
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <![endif]-->
 
   <!-- stylesheet-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-  <link rel="stylesheet" href="./assets/css/style.min.css">
   <!-- slick -->
   <link rel="stylesheet" type="text/css" href="./assets/vendor/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="./assets/vendor/slick/slick-theme.css" />
+  <link rel="stylesheet" href="./assets/css/reset.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.min.css" />
+
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="./assets/css/lt_ie9.css" />
+    <script src="./assets/vendor/html5shiv/html5shiv.min.js"></script>
+    <script src="./assets/vendor/html5shiv/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 
 <body>
-
   <!-- header -->
   <header>
     <!-- ヘッダーコンテナ -->
     <div class="header_container">
       <!-- ロゴ -->
-      <h1 class="logo"><a href="#"><img src="./assets/images/min/demo_inc_logo.svg" alt="demo_inc_logo"><span>DEMO</span></a></h1>
+      <h1 class="logo">
+        <a href="#">
+          <img src="./assets/images/min/demo_inc_logo.svg" alt="demo_inc_logo" class="svg" />
+          <!--[if lt IE 9]>
+            <img src="./assets/images/min/demo_inc_logo.png" alt="demo_inc_logo" />
+          <![endif]-->
+          <span>DEMO</span>
+        </a>
+      </h1>
       <!-- スマホ用メニューアイコン -->
       <div class="trigger_wrap sp">
         <a class="menu_trigger no_scroll" href="#">
@@ -55,21 +65,24 @@
           <ul class="menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">News</a></li>
-            <li class="parent"><a class="no_scroll" href="#">Service</a>
+            <li class="parent">
+              <a class="no_scroll" href="#">Service</a>
               <ul class="child_lists">
                 <li><a href="#">Webサイト制作</a></li>
                 <li><a href="#">モバイルアプリ開発</a></li>
                 <li><a href="#">システム開発</a></li>
               </ul>
             </li>
-            <li class="parent"><a class="no_scroll" href="#">Works</a>
+            <li class="parent">
+              <a class="no_scroll" href="#">Works</a>
               <ul class="child_lists">
                 <li><a href="#">Webサイト制作実績</a></li>
                 <li><a href="#">モバイルアプリ開発実績</a></li>
                 <li><a href="#">システム開発実績</a></li>
               </ul>
             </li>
-            <li class="parent"><a class="no_scroll"  href="#">Company</a>
+            <li class="parent">
+              <a class="no_scroll" href="#">Company</a>
               <ul class="child_lists">
                 <li><a href="#">お知らせ</a></li>
                 <li><a href="#">会社概要</a></li>
@@ -86,21 +99,24 @@
           <ul class="menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">News</a></li>
-            <li class="parent"><a class="no_scroll"  href="#">Service</a>
+            <li class="parent">
+              <a class="no_scroll" href="#">Service</a>
               <ul class="child_lists">
                 <li><a href="#">Webサイト制作</a></li>
                 <li><a href="#">モバイルアプリ開発</a></li>
                 <li><a href="#">システム開発</a></li>
               </ul>
             </li>
-            <li class="parent"><a class="no_scroll"  href="#">Works</a>
+            <li class="parent">
+              <a class="no_scroll" href="#">Works</a>
               <ul class="child_lists">
                 <li><a href="#">Webサイト制作実績</a></li>
                 <li><a href="#">モバイルアプリ開発実績</a></li>
                 <li><a href="#">システム開発実績</a></li>
               </ul>
             </li>
-            <li class="parent"><a class="no_scroll"  href="#">Company</a>
+            <li class="parent">
+              <a class="no_scroll" href="#">Company</a>
               <ul class="child_lists">
                 <li><a href="#">お知らせ</a></li>
                 <li><a href="#">会社概要</a></li>
@@ -134,52 +150,66 @@
       <div class="news_items slider">
         <div class="news_item">
           <a href="#" class="news_item_link">
-            <img class="news_item_image"
-            srcset="./assets/images/min/security_image@2x.jpg 2x, ./assets/images/min/security_image.jpg 1x"
-            src="./assets/images/min/security_image.jpg">
+            <img class="news_item_image" srcset="
+                  ./assets/images/min/security_image@2x.jpg 2x,
+                  ./assets/images/min/security_image.jpg    1x
+                " src="./assets/images/min/security_image.jpg" />
             <time>2020.3.15</time>
-            <p class="news_item_description">4月17日(金)にセキュリティに関するセミナーを開催致します。</p>
+            <p class="news_item_description">
+              4月17日(金)にセキュリティに関するセミナーを開催致します。
+            </p>
           </a>
         </div>
         <div class="news_item">
           <a href="#" class="news_item_link">
-            <img class="news_item_image"
-              srcset="./assets/images/min/hp_screenshot@2x.jpg 2x, ./assets/images/min/hp_screenshot.jpg 1x"
-              src="./assets/images/min/hp_screenshot.jpg">
+            <img class="news_item_image" srcset="
+                  ./assets/images/min/hp_screenshot@2x.jpg 2x,
+                  ./assets/images/min/hp_screenshot.jpg    1x
+                " src="./assets/images/min/hp_screenshot.jpg" />
             <time>2020.3.12</time>
-            <p class="news_item_description">ホームページのリニューアルを行いました。</p>
+            <p class="news_item_description">
+              ホームページのリニューアルを行いました。
+            </p>
           </a>
         </div>
         <div class="news_item">
           <a href="#" class="news_item_link">
-            <img class="news_item_image"
-              srcset="./assets/images/min/security_image@2x.jpg 2x, ./assets/images/min/security_image.jpg 1x"
-              src="./assets/images/min/security_image.jpg">
+            <img class="news_item_image" srcset="
+                  ./assets/images/min/security_image@2x.jpg 2x,
+                  ./assets/images/min/security_image.jpg    1x
+                " src="./assets/images/min/security_image.jpg" />
             <time>2020.2.17</time>
-            <p class="news_item_description">3月20日(金)にセキュリティに関するセミナーを開催致します。</p>
+            <p class="news_item_description">
+              3月20日(金)にセキュリティに関するセミナーを開催致します。
+            </p>
           </a>
         </div>
         <div class="news_item">
           <a href="#" class="news_item_link">
-            <img class="news_item_image"
-              srcset="./assets/images/min/document_image@2x.jpg 2x, ./assets/images/min/document_image.jpg 1x"
-              src="./assets/images/min/document_image.jpg">
+            <img class="news_item_image" srcset="
+                  ./assets/images/min/document_image@2x.jpg 2x,
+                  ./assets/images/min/document_image.jpg    1x
+                " src="./assets/images/min/document_image.jpg" />
             <time>2020.1.27</time>
-            <p class="news_item_description">「個人情報及び特定個人情報保護方針」及び「個人情報の取り扱い」を改訂いたしました。</p>
+            <p class="news_item_description">
+              「個人情報及び特定個人情報保護方針」及び「個人情報の取り扱い」を改訂いたしました。
+            </p>
           </a>
         </div>
         <div class="news_item">
           <a href="#" class="news_item_link">
-            <img class="news_item_image"
-              srcset="./assets/images/min/security_image@2x.jpg 2x, ./assets/images/min/security_image.jpg 1x"
-              src="./assets/images/min/security_image.jpg">
+            <img class="news_item_image" srcset="
+                  ./assets/images/min/security_image@2x.jpg 2x,
+                  ./assets/images/min/security_image.jpg    1x
+                " src="./assets/images/min/security_image.jpg" />
             <time>2020.1.16</time>
-            <p class="news_item_description">2月21日(金)にセキュリティに関するセミナーを開催致します。</p>
+            <p class="news_item_description">
+              2月21日(金)にセキュリティに関するセミナーを開催致します。
+            </p>
           </a>
         </div>
       </div>
     </div>
-    
   </section>
 
   <!-- Serviceセクション -->
@@ -194,19 +224,34 @@
       <!-- アイテム -->
       <div class="service_items">
         <div class="service_item">
-          <img src="./assets/images/min/website_icon.svg" alt="" class="service_item_image">
+          <img src="./assets/images/min/website_icon.svg" alt="" class="service_item_image svg" />
+          <!--[if lt IE 9]>
+            <img src="./assets/images/min/website_icon.png" alt="" />
+          <![endif]-->
           <h3 class="service_item_title">Webサイト制作</h3>
-          <p class="service_item_description">レスポンシブに対応したモダンなデザインのWebサイトを制作いたします。</p>
+          <p class="service_item_description">
+            レスポンシブに対応したモダンなデザインのWebサイトを制作いたします。
+          </p>
         </div>
         <div class="service_item">
-          <img src="./assets/images/min/phone_icon.svg" alt="" class="service_item_image">
+          <img src="./assets/images/min/phone_icon.svg" alt="" class="service_item_image svg" />
+          <!--[if lt IE 9]>
+            <img src="./assets/images/min/phone_icon.png" alt="" />
+          <![endif]-->
           <h3 class="service_item_title">モバイルアプリ開発</h3>
-          <p class="service_item_description">iPhoneアプリ、アンドロイドアプリを効率的な方法で開発いたします。</p>
+          <p class="service_item_description">
+            iPhoneアプリ、アンドロイドアプリを効率的な方法で開発いたします。
+          </p>
         </div>
         <div class="service_item">
-          <img src="./assets/images/min/db_icon.svg" alt="" class="service_item_image">
+          <img src="./assets/images/min/db_icon.svg" alt="" class="service_item_image svg" />
+          <!--[if lt IE 9]>
+            <img src="./assets/images/min/db_icon.png" alt="" />
+          <![endif]-->
           <h3 class="service_item_title">システム開発</h3>
-          <p class="service_item_description">主に業務の効率化や最適化を目指したシステムの開発をいたします。</p>
+          <p class="service_item_description">
+            主に業務の効率化や最適化を目指したシステムの開発をいたします。
+          </p>
         </div>
       </div>
     </div>
@@ -224,15 +269,24 @@
       <!-- アイテム -->
       <div class="works_items">
         <div class="works_item">
-          <img srcset="./assets/images/min/pc_works_img_1@2x.jpg 2x, ./assets/images/min/pc_works_img_1.jpg 1x" src="./assets/images/min/pc_works_img_1.jpg" alt="" class="works_item_image">
+          <img srcset="
+                ./assets/images/min/pc_works_img_1@2x.jpg 2x,
+                ./assets/images/min/pc_works_img_1.jpg    1x
+              " src="./assets/images/min/pc_works_img_1.jpg" alt="" class="works_item_image" />
           <h3 class="works_item_title">雑貨品販売店ホームページ</h3>
         </div>
         <div class="works_item">
-          <img srcset="./assets/images/min/pc_works_img_2@2x.jpg 2x, ./assets/images/min/pc_works_img_2.jpg 1x" src="./assets/images/min/pc_works_img_2.jpg" alt="" class="works_item_image">
+          <img srcset="
+                ./assets/images/min/pc_works_img_2@2x.jpg 2x,
+                ./assets/images/min/pc_works_img_2.jpg    1x
+              " src="./assets/images/min/pc_works_img_2.jpg" alt="" class="works_item_image" />
           <h3 class="works_item_title">飲食店クーポンアプリ</h3>
         </div>
         <div class="works_item">
-          <img srcset="./assets/images/min/pc_works_img_3@2x.jpg 2x, ./assets/images/min/pc_works_img_3.jpg 1x" src="./assets/images/min/pc_works_img_3.jpg" alt="" class="works_item_image">
+          <img srcset="
+                ./assets/images/min/pc_works_img_3@2x.jpg 2x,
+                ./assets/images/min/pc_works_img_3.jpg    1x
+              " src="./assets/images/min/pc_works_img_3.jpg" alt="" class="works_item_image" />
           <h3 class="works_item_title">顧客管理システム</h3>
         </div>
       </div>
@@ -245,19 +299,31 @@
   </section>
 
   <a id="back_to_top" href="#">
-    <img src="./assets/images/min/back_to_top.svg" alt="トップへ戻る">
+    <img src="./assets/images/min/back_to_top.svg" alt="トップへ戻る" class="svg" />
+    <!--[if lt IE 9]>
+      <img src="./assets/images/min/back_to_top.png" alt="トップへ戻る" />
+    <![endif]-->
   </a>
 
   <!-- footer -->
   <footer id="footer">
     <!-- フッターコンテナ -->
     <div class="footer_container">
-      <p class="logo"><a href="#"><img src="./assets/images/min/demo_inc_logo.svg" alt="demo_inc_logo"></a></p>
+      <p class="logo">
+        <a href="#">
+          <img src="./assets/images/min/demo_inc_logo.svg" alt="demo_inc_logo" class="svg" />
+          <!--[if lt IE 9]>
+            <img src="./assets/images/min/demo_inc_logo.png" alt="demo_inc_logo" />
+          <![endif]-->
+        </a>
+      </p>
       <!-- 会社情報 -->
       <div class="company_information">
         <p class="company_name">株式会社 DEMO</p>
         <p class="company_tel_number">Tel: 012-345-6789</p>
-        <address><span>〒000-0000</span>デモ県デモ市デモ町 0-12-34 DEMOビル 5F</address>
+        <address>
+          <span>〒000-0000</span>デモ県デモ市デモ町 0-12-34 DEMOビル 5F
+        </address>
       </div>
       <!-- フッターナビ -->
       <div class="footer_nav">
@@ -295,11 +361,8 @@
     </div>
   </footer>
 
-<!-- JavaScript -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="./assets/vendor/slick/slick.min.js"></script>
-<script type="text/javascript" src="./assets/js/main.min.js"></script>
-
+  <!-- JavaScript -->
+  <script type="text/javascript" src="./assets/js/main.js"></script>
 </body>
 
 </html>

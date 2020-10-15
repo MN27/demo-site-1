@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "mixin";
-@import "variable";
+@import 'mixin';
+@import 'variable';
 
 /* -----------------------------------------------------
 
@@ -151,7 +151,6 @@ header {
   // .trigger_wrap
 
   nav {
-
     .sp {
       display: none;
       overflow: hidden;
@@ -164,15 +163,21 @@ header {
       .menu {
         width: 80%;
         height: 70%;
-        margin:0 auto;
+        margin: 0 auto;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none; // スクロールバー非表示 IE, Edge 対応
+        scrollbar-width: none; // スクロールバー非表示 Firefox 対応
+
+        &::-webkit-scrollbar {
+          display: none; // スクロールバー非表示 Chrome, Safari 対応
+        }
 
         li {
           margin: 20px 0;
         }
 
-        a{
+        a {
           display: block;
           color: $fontColor2;
           @include fontsize(20);
@@ -211,7 +216,7 @@ header {
           position: absolute;
           top: 14px;
           right: 20px;
-          content: "";
+          content: '';
           border-top: 5px solid $partsColor3;
           border-right: 4px solid transparent;
           border-left: 4px solid transparent;
@@ -270,11 +275,11 @@ header {
 // #header_container_bg
 
 .header_bg {
-  width: 100vw;
+  width: 100%;
   height: 222px;
-  background-image: url("../images/min/sp_header_image.jpg");
+  background-image: url('../images/min/sp_header_image.jpg');
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    background-image: url("../images/min/sp_header_image@2x.jpg");
+    background-image: url('../images/min/sp_header_image@2x.jpg');
   }
   background-position: center;
   background-repeat: no-repeat;
@@ -331,8 +336,17 @@ header {
   margin: 114px 0 0;
 }
 
+.slider {
+  opacity: 0;
+  transition: 1s;
+}
+
+.slider.slick-initialized {
+  opacity: 1;
+}
+
 .news_item {
-  margin: 0 10px;
+  padding: 0 10px;
 
   a {
     color: $fontColor;
@@ -420,7 +434,7 @@ header {
     bottom: -20px;
     left: -20px;
     z-index: -1;
-    background-image: url("../images/min/sp_header_image.jpg");
+    background-image: url('../images/min/sp_header_image.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -430,7 +444,9 @@ header {
 }
 
 /* safari */
-_::-webkit-full-page-media, _:future, :root .contact_section::before {
+_::-webkit-full-page-media,
+_:future,
+:root .contact_section::before {
   filter: blur(20px);
 }
 
@@ -493,7 +509,8 @@ footer {
 }
 
 .company_information {
-  p, address {
+  p,
+  address {
     color: $fontColor2;
     @include fontsize(14);
   }
@@ -529,21 +546,19 @@ Tablet
 ----------------------------------------------------- */
 
 @media (min-width: 800px) {
-
   /* header */
 
   .header_bg {
     height: 300px;
-    background-image: url("../images/min/header_image.jpg");
+    background-image: url('../images/min/header_image.jpg');
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      background-image: url("../images/min/header_image@2x.jpg");
+      background-image: url('../images/min/header_image@2x.jpg');
     }
   }
 
   /* news_section */
 
   .news_items {
-
     .slick-arrow {
       z-index: 2;
       top: -34px;
@@ -578,7 +593,6 @@ PC
 ----------------------------------------------------- */
 
 @media (min-width: 1024px) {
-
   /* common */
 
   .sp {
@@ -593,14 +607,13 @@ PC
 
   .header_container {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    transform: translateX(50%);
     height: 80px;
     max-width: $maxWidth;
     margin: 0 auto;
 
     .logo {
-
       img {
         width: auto;
         height: 40px;
@@ -631,7 +644,7 @@ PC
           display: inline-block;
           margin-right: 20px;
         }
-  
+
         a {
           color: $fontColor2;
           font-weight: bold;
@@ -647,12 +660,12 @@ PC
           padding: 5px 16px;
           border-left: 1px solid $baseColor;
           margin-left: 10px;
-  
+
           li {
             margin: 5px 0;
             display: block;
           }
-  
+
           a {
             display: block;
             color: $fontColor2;
@@ -705,7 +718,6 @@ PC
   /* news_section */
 
   .news_section {
-
     .section_container {
       position: relative;
       width: 950px;
@@ -772,6 +784,10 @@ PC
     justify-content: space-around;
   }
 
+  .works_item {
+    width: calc(100% / 3);
+  }
+
   /* footer */
 
   .footer_container {
@@ -787,7 +803,8 @@ PC
   .company_information {
     margin: 20px 0 0 30px;
 
-    p, address {
+    p,
+    address {
       @include fontsize(12);
     }
 

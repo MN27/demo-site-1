@@ -9,8 +9,9 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/polyfill": "^7.11.5",
     "@babel/preset-env": "^7.9.5",
-    "core-js": "3",
+    "babel-loader": "^8.1.0",
     "eslint": "^6.8.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -23,6 +24,12 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-pngquant": "^8.0.0"
+    "imagemin-pngquant": "^8.0.0",
+    "webpack": "^5.1.0",
+    "webpack-stream": "^6.1.0"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "slick-carousel": "^1.8.1"
   }
 }
