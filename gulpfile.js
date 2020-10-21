@@ -2,7 +2,7 @@ const { src, dest, watch, series } = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
-const cssmin = require('gulp-cssmin');
+const cleancss = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const mozjpeg = require('imagemin-mozjpeg');
@@ -13,7 +13,7 @@ const webpack = require('webpack');
 // webpackの設定ファイルの読み込み
 const webpackConfig = require('./webpack.config');
 
-function compileSass() {
+const compileSass = () => {
   return src('./assets/sass/style.scss')
     .pipe(sourcemaps.init())
     .pipe(
@@ -29,24 +29,24 @@ function compileSass() {
     )
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./assets/css'));
-}
+};
 
-function cssMin() {
+const cleanCSS = () => {
   return src('./assets/css/style.css')
-    .pipe(cssmin())
+    .pipe(cleancss())
     .pipe(
       rename({
         suffix: '.min',
       }),
     )
     .pipe(dest('./assets/css'));
-}
+};
 
-function jsMin() {
+const jsMin = () => {
   return webpackStream(webpackConfig, webpack).pipe(dest('./assets/js'));
-}
+};
 
-function imageMin() {
+const imageMin = () => {
   return src('./assets/images/*.{jpg,jpeg,png,gif,svg}')
     .pipe(
       imagemin([
@@ -57,10 +57,10 @@ function imageMin() {
       ]),
     )
     .pipe(dest('./assets/images/min'));
-}
+};
 
 const watchSassFiles = () => watch('./assets/sass/style.scss', compileSass);
 exports.default = watchSassFiles;
-exports.sass = series(compileSass, cssMin);
-exports.build = series(compileSass, cssMin, jsMin, imageMin);
+exports.sass = series(compileSass, cleanCSS);
+exports.build = series(compileSass, cleanCSS, jsMin, imageMin);
 exports.js = jsMin;
