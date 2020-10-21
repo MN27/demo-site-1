@@ -338,7 +338,7 @@ header {
 
 .slider {
   opacity: 0;
-  transition: 1s;
+  transition: 1s opacity;
 }
 
 .slider.slick-initialized {

@@ -31,7 +31,7 @@ const compileSass = () => {
     .pipe(dest('./assets/css'));
 };
 
-const cleanCSS = () => {
+const cssMin = () => {
   return src('./assets/css/style.css')
     .pipe(cleancss())
     .pipe(
@@ -61,6 +61,6 @@ const imageMin = () => {
 
 const watchSassFiles = () => watch('./assets/sass/style.scss', compileSass);
 exports.default = watchSassFiles;
-exports.sass = series(compileSass, cleanCSS);
-exports.build = series(compileSass, cleanCSS, jsMin, imageMin);
+exports.sass = series(compileSass, cssMin);
+exports.build = series(compileSass, cssMin, jsMin, imageMin);
 exports.js = jsMin;
