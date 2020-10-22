@@ -59,8 +59,8 @@ const imageMin = () => {
     .pipe(dest('./assets/images/min'));
 };
 
-const watchSassFiles = () => watch('./assets/sass/style.scss', compileSass);
+const watchSassFiles = () => watch('./assets/sass/style.scss', series(compileSass, cssMin));
 exports.default = watchSassFiles;
 exports.sass = series(compileSass, cssMin);
-exports.build = series(compileSass, cssMin, jsMin, imageMin);
 exports.js = jsMin;
+exports.build = series(compileSass, cssMin, jsMin, imageMin);

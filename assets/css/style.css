@@ -337,8 +337,8 @@ header {
 
 .slider {
   opacity: 0;
-  -webkit-transition: 1s opacity;
-  transition: 1s opacity;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .slider.slick-initialized {
@@ -694,14 +694,15 @@ PC
   .news_section .section_container {
     position: relative;
     width: 950px;
+    height: 250px;
     background-color: #FFFFFF;
     margin-top: -200px;
   }
   .news_section .section_header {
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    top: 30px;
+    -webkit-transform: none;
+    transform: none;
     float: left;
     width: 25%;
     background: none;

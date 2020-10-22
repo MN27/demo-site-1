@@ -338,7 +338,7 @@ header {
 
 .slider {
   opacity: 0;
-  transition: 1s opacity;
+  transition: opacity 1s;
 }
 
 .slider.slick-initialized {
@@ -721,14 +721,15 @@ PC
     .section_container {
       position: relative;
       width: 950px;
+      height: 250px;
       background-color: $baseColor;
       margin-top: -200px;
     }
 
     .section_header {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 30px;
+      transform: none;
       float: left;
       width: 25%;
       background: none;
